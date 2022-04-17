@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body{
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*bar de recherche*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgb(0, 255, 149);
+    padding-right: 10px;
+    width: 100%;
+}
+nav .profile{
+    display: flex;
+    align-items: center;
+}
+nav .profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}  
+nav .profile h1{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+}
+.nav-links li{
+    margin-left: 20px;
+    cursor: pointer;
+}
+#menu li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: all ease-in-out 0.5s;
+}
+#menu li.active, #menu li:hover{
+    background-color: white;
+    border-top-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+#menu li.active a, #menu li:hover a{
+    color: rgb(0, 255, 149);
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/*Contenu de la page*/
+.page-content{
+    margin: 4%;
+}
+.page-content section{
+    margin-top: 5%;
+    max-width: 80%;
+}
+.page-content section h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 6vw;
+}
+.page-content section p{
+    line-height: 30px;
+    color:gray;
+}
+.page-content .presentation-image{
+    margin-top: 5%;
+}
+.page-content .presentation-image img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*A propos de moi*/
+.moi-section{
+    margin: 4%;
+}
+.moi-section header{
+    max-width: 80%;
+}
+.moi-section header h1{
+    font-size: 3vw;
+    margin: 0;
+    text-transform: uppercase;
+}
+.moi-section header p{
+    line-height: 30px;
+    color:gray;
+}
+.presentation-image{
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+
+/*Mes Projets*/
+.projects-section{
+    margin: 6%;
+}
+.projects-section h1{
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 3vw;
+}
+.projects-section .projects{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.projects-section .projects .project{
+    max-width: 195px;
+    margin-right: 20px;
+}
+.projects-section .projects .project .name:hover{
+    background-color: rgb(0, 255, 149);
+    border-top-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+.projects-section .projects .project .name a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: all ease-in-out 0.5s;
+}
+.projects-section .projects .project h4{
+    margin: 0;
+}
+.projects-section .projects .project .description{
+    font-size: 13px;
+}
+.projects-section .projects .project .dates{
+    font-size: 15px;
+    color: rgb(145, 145, 145);
+}
+
+/*bas de page*/
+footer{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(0, 255, 149);
+    color: white;
+    padding: 10px;
+}
+footer .colonne p{
+    font-size: 14px;
+}
+footer .colonne a{
+    text-decoration: none;
+}
+.liens.active, .liens:hover{
+    background-color: white;
+    border-top-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+footer .colonne .liens a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: all ease-in-out 0.5s;
+}
+footer .colonne .liens.active a, footer .colonne .liens:hover a{
+    color: rgb(0, 255, 149);
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fa-twitter {
+    background: white;
+    color: rgb(0, 255, 149);
+}
+.fa:hover{
+    background-color: rgb(0, 255, 149);
+}
+.f.active, .fa:hover {
+    color: white;
+}
+
+/*responsive*/
+@media screen and (max-width: 768px){
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 5.3vh;
+        background-color: rgb(0, 255, 149);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        transform: translateX(110%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        margin: auto;
+        align-items: center;
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translate(5%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-10px, 4px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-10px, -5px);
+}
+
